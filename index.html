@@ -7,33 +7,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV of Inga Schallock</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
+    />
     <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&family=Rubik&display=swap"
+      rel="stylesheet"
+    /> -->
   </head>
   <body>
     <header class="mainHeader">
       <h1>Inga Schallock</h1>
       <p>Trainee at Coding Bootcamps Europe (CBE)</p>
+      <br />
       <nav class="mainNav">
         <a href="#profile">Profile</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
+      <aside class="hireMe">Hire Me!</aside>
     </header>
     <main>
       <article id="profile">
-        <h2>Profile</h2>
-        <p id="desc">
-          I'm a very <i>structured but creative</i>s person who always likes to
-          do tasks <strong>the best way possible</strong>.
+        <h2 class="artHeader">Profile</h2>
+        <p>
+          I'm a very structured but creative person who always likes to do tasks
+          the best way possible.
         </p>
       </article>
       <article id="experience">
-        <h2>Experience</h2>
+        <h2 class="artHeader">Experience</h2>
         <section>
           <header>
-            <h3>Praktikant im HR bei DYWIDAG</h3>
-            <p>10/2019 - 02/2020</p>
+            <h3 class="xpHeader">Intern HR at DYWIDAG</h3>
+            <p class="xpSubheader">10/2019 - 02/2020</p>
           </header>
           <p>Tasks:</p>
           <p>
@@ -45,8 +57,8 @@
         </section>
         <section>
           <header>
-            <h3>Specialist Apple</h3>
-            <p>05/2018 - 10/2018</p>
+            <h3 class="xpHeader">Specialist Apple</h3>
+            <p class="xpSubheader">05/2018 - 10/2018</p>
           </header>
           <p>Tasks:</p>
           <p>
@@ -58,10 +70,39 @@
           </p>
         </section>
       </article>
-      <article id="skills">
-        <h2>Skills</h2>
+      <article id="education">
+        <h2 class="artHeader">Education</h2>
         <section>
-          <h3>Soft Skills</h3>
+          <header>
+            <h3 class="eduHeader">Coding Bootcamps Europe, Webdeveloper</h3>
+            <p class="eduSubheader">06/2021 - 09/2021</p>
+          </header>
+          <p>Contents:</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            qui doloremque molestias quod eum amet, nesciunt delectus veritatis
+            autem blanditiis nam reprehenderit natus necessitatibus dolor
+            sapiente hic, quaerat magni. Nam.
+          </p>
+          <header>
+            <h3 class="eduHeader">
+              Hochschule Mittweida, B.A. Wirtschafts- und Werbepsychologie
+            </h3>
+            <p class="eduSubheader">10/2017 - 10/2020</p>
+          </header>
+          <p>Contents:</p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
+            expedita, quaerat dolorum sed minus nostrum excepturi deserunt nemo
+            vero dolor recusandae vitae quod saepe officia quidem autem impedit
+            quas laborum!
+          </p>
+        </section>
+      </article>
+      <article id="skills">
+        <h2 class="artHeader">Skills</h2>
+        <section>
+          <h3>Soft Skills:</h3>
           <ul>
             <li>friendly</li>
             <li>networking</li>
@@ -69,7 +110,7 @@
           </ul>
         </section>
         <section>
-          <h3>Technical Skills</h3>
+          <h3>Technical Skills:</h3>
           <ul>
             <li>Apple</li>
             <li>Photoshop</li>
@@ -78,13 +119,20 @@
         </section>
       </article>
       <article id="contact">
-        <h2>Contact</h2>
-        <address>
+        <h2 class="artHeader">Contact</h2>
+        <section>
           <ol>
-            <li><a href="mailto:abc@gmail.com">Mail</a> <br /></li>
-            <li><a href="tel:+1234567890">Tel</a></li>
+            <li class="contact">
+              <a href="mailto:abc@gmail.com"
+                >Click for <strong>mail</strong>
+              </a>
+              <br />
+            </li>
+            <li class="contact">
+              <a href="tel:+1234567890">Click for <strong>tel.-nr.</strong> </a>
+            </li>
           </ol>
-        </address>
+        </section>
       </article>
     </main>
   </body>
