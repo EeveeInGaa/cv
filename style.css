@@ -1,37 +1,152 @@
-* {
+/* ****************** general styling ****************** */
+
+/* general */
+
+*,
+*:before,
+*:after {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
 }
+
+/* fonts */
+
+@font-face {
+  font-family: "Finnmark-Regular";
+  src: url("Finnmark-Regular.woff");
+}
+
+html {
+  font-family: "Finnmark-Regular", sans-serif;
+  background-color: #f8f9ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Finnmark-Regular", sans-serif;
+}
+
+/* other */
+
 main {
   padding-left: 20px;
   max-width: 800px;
   margin: 0 auto;
 }
 
+main > * + * {
+  padding-top: 15px;
+  margin-top: 40px;
+  border-top: 3px solid #d8c7d3;
+}
+
+*::selection {
+  background-color: #dee2ff;
+}
+
+/* ****************** specific styling ****************** */
+
+/* Headers */
+
 .mainHeader {
-  background-color: #dbd3d8;
+  background-color: #d8c7d3;
   padding: 48px 16px;
   text-align: center;
-}
-#desc {
-  color: #696d7d;
+  position: relative;
 }
 
-/*wie können <a> Tags farblich verändert werden? */
-
-.mainNav {
-  color: #696d7d;
+.mainHeader > p::after {
+  content: "🦊";
+  padding-left: 5px;
 }
 
-/*wie können eigene Schriften angewandt werden? */
+.xpHeader {
+  display: inline-block;
+}
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.xpSubheader {
+  display: inline-block;
+  font-size: small;
+}
+
+.eduHeader {
+  display: inline-block;
+}
+
+.eduSubheader {
+  display: inline;
+  font-size: small;
+}
+
+/* nav/links */
+
+.mainNav a {
+  color: black;
+  margin: 13.5px;
+  padding: 7px;
+  outline: 2px solid #dee2ff;
+  transition: 0.3s;
+}
+
+nav > a:hover {
+  background-color: #dee2ff;
+  transition: 0.3s;
+}
+
+nav > a:active {
+  background-color: #99a5ff;
+  outline: 2px solid #99a5ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* contact info */
+
+.contact a {
+  color: black;
+}
+
+.contact + .contact {
+  margin-top: 15px;
+}
+
+.contact > a:hover {
+  background-color: #dee2ff;
+  padding: 5px;
+  margin-top: 7px;
+}
+
+.contact > a:active {
+  background-color: #99a5ff;
+  outline: 2px solid #99a5ff;
+}
+
+/* other */
+
+#profile {
+  padding-top: 15px;
+}
+
+.artHeader {
+  position: relative;
+  left: -10px;
+}
+
+.hireMe {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  background: #dee2ff;
+  color: black;
 }
