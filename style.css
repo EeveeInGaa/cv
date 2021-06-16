@@ -22,6 +22,7 @@ body {
 html {
   font-family: "Finnmark-Regular", sans-serif;
   background-color: #f8f9ff;
+  font-size: 15px;
 }
 
 h1,
@@ -36,15 +37,19 @@ h6 {
 /* other */
 
 main {
-  padding-left: 20px;
-  max-width: 800px;
+  padding-left: 2rem;
+  max-width: 80rem;
   margin: 0 auto;
 }
 
 main > * + * {
-  padding-top: 15px;
-  margin-top: 40px;
-  border-top: 3px solid #d8c7d3;
+  padding-top: 1.5rem;
+  margin-top: 2.5rem;
+  border-top: 0.3rem solid #d8c7d3;
+}
+
+main > * {
+  padding: 0 1rem;
 }
 
 *::selection {
@@ -57,15 +62,27 @@ main > * + * {
 
 .mainHeader {
   background-color: #d8c7d3;
-  padding: 48px 16px;
+  padding: 4.8rem 1.6rem;
   text-align: center;
   position: relative;
 }
 
-.mainHeader > p::after {
+.mainHeader p::after {
   content: "🦊";
-  padding-left: 5px;
+  padding-left: 0.5rem;
 }
+
+.headingGroup {
+  font-size: 1.5rem;
+}
+
+/*.mainHeading {
+  font-size: 1em;
+}
+
+.profession {
+  font-size: 0.25em;
+}*/
 
 .xpHeader {
   display: inline-block;
@@ -81,7 +98,7 @@ main > * + * {
 }
 
 .eduSubheader {
-  display: inline;
+  display: inline-block;
   font-size: small;
 }
 
@@ -89,10 +106,11 @@ main > * + * {
 
 .mainNav a {
   color: black;
-  margin: 13.5px;
-  padding: 7px;
-  outline: 2px solid #dee2ff;
+  margin: 1rem;
+  padding: 0.7rem;
+  outline: 0.2rem solid #dee2ff;
   transition: 0.3s;
+  display: inline-block;
 }
 
 nav > a:hover {
@@ -102,7 +120,7 @@ nav > a:hover {
 
 nav > a:active {
   background-color: #99a5ff;
-  outline: 2px solid #99a5ff;
+  outline: 0.2rem solid #99a5ff;
 }
 
 a {
@@ -116,37 +134,38 @@ a {
 }
 
 .contact + .contact {
-  margin-top: 15px;
+  margin-top: 1.5rem;
 }
 
 .contact > a:hover {
   background-color: #dee2ff;
-  padding: 5px;
-  margin-top: 7px;
+  padding: 0.5rem;
+  margin-top: 0.7rem;
 }
 
 .contact > a:active {
   background-color: #99a5ff;
-  outline: 2px solid #99a5ff;
+  outline: 0.2rem solid #99a5ff;
 }
 
 /* other */
 
 #profile {
-  padding-top: 15px;
+  margin-top: 2.5rem;
 }
 
 .artHeader {
   position: relative;
-  left: -10px;
+  left: -1rem;
+  margin-top: 2.5rem;
 }
 
 .hireMe {
   position: absolute;
-  right: 16px;
-  top: 16px;
-  padding: 8px;
-  border-radius: 4px;
+  right: 1.6rem;
+  top: 1.6rem;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
   background: #dee2ff;
   color: black;
 }
