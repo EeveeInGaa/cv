@@ -12,17 +12,53 @@ body {
   margin: 0;
 }
 
+html {
+  font-family: "Finnmark-Regular", sans-serif;
+  background-color: #f8f9ff;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 18px;
+  }
+  main article {
+    padding-top: 1.5rem;
+    margin-top: 3.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 22px;
+  }
+  main article {
+    padding-top: 1.5rem;
+    margin-top: 3.5rem;
+  }
+  .hireMe {
+    position: fixed;
+  }
+}
+
+@media print {
+  nav,
+  .hireMe {
+    display: none;
+  }
+  .mainHeader {
+    background-color: #d8c7d3;
+    padding: 0;
+    text-align: center;
+    position: relative;
+  }
+}
+
 /* fonts */
 
 @font-face {
   font-family: "Finnmark-Regular";
   src: url("Finnmark-Regular.woff");
-}
-
-html {
-  font-family: "Finnmark-Regular", sans-serif;
-  background-color: #f8f9ff;
-  font-size: 15px;
 }
 
 h1,
@@ -168,4 +204,12 @@ a {
   border-radius: 0.4rem;
   background: #dee2ff;
   color: black;
+}
+
+header .profession {
+  margin: 0;
+}
+
+_body * {
+  outline: 2px solid red;
 }
