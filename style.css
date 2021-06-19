@@ -13,9 +13,11 @@ body {
 }
 
 html {
-  font-family: "Finnmark-Regular", sans-serif;
+  _font-family: "Finnmark-Regular", sans-serif;
+  font-family: "Spartan", sans-serif;
   background-color: #f8f9ff;
   font-size: 15px;
+  -webkit-print-color-adjust: exact;
 }
 
 @media screen and (min-width: 700px) {
@@ -56,10 +58,10 @@ html {
 
 /* fonts */
 
-@font-face {
+/* @font-face { 
   font-family: "Finnmark-Regular";
   src: url("Finnmark-Regular.woff");
-}
+}*/
 
 h1,
 h2,
@@ -67,14 +69,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Finnmark-Regular", sans-serif;
+  _font-family: "Finnmark-Regular", sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
 /* other */
 
 main {
+  max-width: 60ch;
   padding-left: 2rem;
-  max-width: 80rem;
   margin: 0 auto;
 }
 
@@ -109,16 +112,16 @@ main > * {
 }
 
 .headingGroup {
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
 
-/*.mainHeading {
+.mainHeading {
   font-size: 1em;
 }
 
 .profession {
-  font-size: 0.25em;
-}*/
+  font-size: 0.5em;
+}
 
 .xpHeader {
   display: inline-block;
@@ -144,7 +147,8 @@ main > * {
   color: black;
   margin: 1rem;
   padding: 0.7rem;
-  outline: 0.2rem solid #dee2ff;
+  border: 0.2rem solid #dee2ff;
+  border-radius: 0.4rem;
   transition: 0.3s;
   display: inline-block;
 }
@@ -156,7 +160,8 @@ nav > a:hover {
 
 nav > a:active {
   background-color: #99a5ff;
-  outline: 0.2rem solid #99a5ff;
+  border: 0.2rem solid #99a5ff;
+  border-radius: 0.4rem;
 }
 
 a {
