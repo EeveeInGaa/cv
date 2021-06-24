@@ -15,45 +15,9 @@ body {
 html {
   _font-family: "Finnmark-Regular", sans-serif;
   font-family: "Spartan", sans-serif;
-  background-color: #f8f9ff;
+  background-color: var(--site-backgroundcolor);
   font-size: 15px;
   -webkit-print-color-adjust: exact;
-}
-
-@media screen and (min-width: 700px) {
-  html {
-    font-size: 18px;
-  }
-  main article {
-    padding-top: 1.5rem;
-    margin-top: 3.5rem;
-  }
-}
-
-@media (min-width: 900px) {
-  html {
-    font-size: 22px;
-  }
-  main article {
-    padding-top: 1.5rem;
-    margin-top: 3.5rem;
-  }
-  .hireMe {
-    position: fixed;
-  }
-}
-
-@media print {
-  nav,
-  .hireMe {
-    display: none;
-  }
-  .mainHeader {
-    background-color: #d8c7d3;
-    padding: 0;
-    text-align: center;
-    position: relative;
-  }
 }
 
 /* fonts */
@@ -84,7 +48,7 @@ main {
 main > * + * {
   padding-top: 1.5rem;
   margin-top: 2.5rem;
-  border-top: 0.3rem solid #d8c7d3;
+  border-top: 0.3rem solid var(--main-sitecolor);
 }
 
 main > * {
@@ -92,7 +56,22 @@ main > * {
 }
 
 *::selection {
-  background-color: #dee2ff;
+  background-color: var(--second-color);
+}
+
+body {
+  --main-sitecolor: #d8c7d3;
+  --gradient-color: #c4abbd;
+  --second-color: #dee2ff;
+  --second-subcolor: #99a5ff;
+  --focus-color: #729ea1;
+  --site-backgroundcolor: #f8f9ff;
+  --normalize-textcolor: black;
+  --outline-supportcolor: red;
+  --dark-backgroundcolor: ;
+  --dark-textcolor: ;
+  --dark-main-sitecolor: ;
+  --dark-gradient-color: ;
 }
 
 /* ****************** specific styling ****************** */
@@ -100,10 +79,11 @@ main > * {
 /* Headers */
 
 .mainHeader {
-  background-color: #d8c7d3;
+  background-color: var(--main-sitecolor);
   padding: 4.8rem 1.6rem;
   text-align: center;
   position: relative;
+  background: linear-gradient(var(--gradient-color), var(--main-sitecolor));
 }
 
 .mainHeader p::after {
@@ -123,44 +103,54 @@ main > * {
   font-size: 0.5em;
 }
 
-.xpHeader {
-  display: inline-block;
+.xpHeading {
+  display: flex;
+  flex-direction: column;
 }
 
 .xpSubheader {
-  display: inline-block;
   font-size: small;
 }
 
-.eduHeader {
-  display: inline-block;
+.eduHeading {
+  display: flex;
+  flex-direction: column;
 }
 
 .eduSubheader {
-  display: inline-block;
   font-size: small;
 }
 
 /* nav/links */
 
 .mainNav a {
-  color: black;
+  color: var(--normalize-textcolor);
   margin: 1rem;
   padding: 0.7rem;
-  border: 0.2rem solid #dee2ff;
+  border: 0.2rem solid var(--second-color);
   border-radius: 0.4rem;
   transition: 0.3s;
   display: inline-block;
 }
 
+.mainNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 nav > a:hover {
-  background-color: #dee2ff;
-  transition: 0.3s;
+  background-color: var(--second-color);
 }
 
 nav > a:active {
-  background-color: #99a5ff;
-  border: 0.2rem solid #99a5ff;
+  background-color: var(--second-subcolor);
+  border: 0.2rem solid var(--second-subcolor);
+  border-radius: 0.4rem;
+}
+
+nav > a:focus {
+  border: 0.5rem solid var(--focus-color);
   border-radius: 0.4rem;
 }
 
@@ -168,10 +158,12 @@ a {
   text-decoration: none;
 }
 
+/* main */
+
 /* contact info */
 
 .contact a {
-  color: black;
+  color: var(--normalize-textcolor);
 }
 
 .contact + .contact {
@@ -179,26 +171,69 @@ a {
 }
 
 .contact > a:hover {
-  background-color: #dee2ff;
+  background-color: var(--second-color);
   padding: 0.5rem;
   margin-top: 0.7rem;
 }
 
 .contact > a:active {
-  background-color: #99a5ff;
-  outline: 0.2rem solid #99a5ff;
+  background-color: var(--second-subcolor);
+  outline: 0.2rem solid var(--second-subcolor);
+}
+
+.contact > a:focus {
+  padding: 0.3rem;
+  border: 0.3rem solid var(--focus-color);
+  border-radius: 0.4rem;
+}
+
+/* footer */
+
+footer {
+  background: linear-gradient(var(--main-sitecolor), var(--gradient-color));
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.footerText {
+  text-align: center;
+  margin: 0;
+}
+
+.footerLink {
+  color: var(--normalize-textcolor);
+  border: 0.2rem solid var(--second-color);
+  border-radius: 0.4rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
+
+.footerLink:hover {
+  background-color: var(--second-color);
+}
+
+.footerLink:active {
+  background-color: var(--second-subcolor);
+  border: 0.2rem solid var(--second-subcolor);
+  border-radius: 0.4rem;
+}
+
+.footerLink:focus {
+  border: 0.5rem solid var(--focus-color);
+  border-radius: 0.4rem;
 }
 
 /* other */
 
 #profile {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .artHeader {
   position: relative;
   left: -1rem;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .hireMe {
@@ -207,8 +242,13 @@ a {
   top: 1.6rem;
   padding: 0.8rem;
   border-radius: 0.4rem;
-  background: #dee2ff;
-  color: black;
+  background: var(--second-color);
+  color: var(--normalize-textcolor);
+  transition: transform 0.5s;
+}
+
+.mainHeader:hover .hireMe {
+  transform: scale(120%);
 }
 
 header .profession {
@@ -216,5 +256,66 @@ header .profession {
 }
 
 _body * {
-  outline: 2px solid red;
+  outline: 2px solid var(--outline-supportcolor);
+}
+
+.contentWrapper {
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 18px;
+  }
+  main article {
+    padding-top: 1.5rem;
+    margin-top: 3.5rem;
+  }
+  .mainNav {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .xpHeading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .mainArticle {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 22px;
+  }
+  main article {
+    padding-top: 1.5rem;
+    margin-top: 3.5rem;
+  }
+  .hireMe {
+    position: absolute;
+  }
+}
+
+@media print {
+  nav,
+  .hireMe {
+    display: none;
+  }
+  .mainHeader {
+    background-color: var(--main-sitecolor);
+    padding: 0;
+    text-align: center;
+    position: relative;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    _background-color: black;
+    _color: white;
+  }
 }
